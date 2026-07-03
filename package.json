@@ -1,0 +1,25 @@
+{
+  "name": "codespaces-test20260703",
+  "version": "1.0.0",
+  "description": "스마티빌리지 codespaces-test20260703",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKY-github/codespaces-test20260703.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KKY-github/codespaces-test20260703/issues"
+  },
+  "homepage": "https://github.com/KKY-github/codespaces-test20260703#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
