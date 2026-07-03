@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// CORS 설정 (프론트엔드에서 오는 요청 허용)
+app.use(cors());
 // JSON 요청 본문(body)을 파싱하기 위한 미들웨어
 app.use(express.json());
 
@@ -89,6 +92,14 @@ app.delete('/api/items/:id', (req, res) => {
     const deletedItem = items.splice(itemIndex, 1);
 
     res.status(200).json({ message: 'Item deleted successfully', data: deletedItem[0] });
+});
+
+// 💡 [추가] 프론트엔드에 보내줄 샘플 데이터 API
+app.get('/api/data', (req, res) => {
+    res.json({
+        message: "백엔드(Render)에서 성공적으로 가져온 데이터입니다!",
+        list: ["React 공부하기", "Express 배포하기", "포트폴리오 완성하기"]
+    });
 });
 
 // --- 서버 시작 ---
