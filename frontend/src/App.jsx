@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     // 2. 주소를 적을 때 기존 백엔드 주소 대신 ${API_URL}을 사용합니다.
     // 백엔드 Express에 '/api/hello'라는 라우터가 있다고 가정해볼게요.
-    fetch(`${API_URL}/api/hello`)
+    fetch(`${API_URL}/api/data`)
       .then((res) => res.json())
       .then((result) => setData(result.message))
       .catch((err) => console.error("데이터 가져오기 실패:", err));
