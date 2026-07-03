@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // JSON 요청 본문(body)을 파싱하기 위한 미들웨어
 app.use(express.json());
